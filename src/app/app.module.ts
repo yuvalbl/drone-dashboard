@@ -2,15 +2,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import {AngularCesiumModule, CameraService, CesiumService} from 'angular-cesium';
+import { MapComponent } from './map/map.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MapComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    AngularCesiumModule.forRoot()
   ],
-  providers: [],
+  providers: [CameraService, CesiumService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

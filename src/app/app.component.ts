@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {DataService} from './data.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'drone-dashboard-POC';
+  numOfDrones = 60;
+  title = 'drone-dashboard';
+
+  constructor(private dataService: DataService) {
+
+  }
+
+  recalculateData() {
+    this.dataService.generateGameData(this.numOfDrones );
+  }
 }

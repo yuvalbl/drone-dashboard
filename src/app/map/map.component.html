@@ -1,0 +1,40 @@
+<ac-map>
+  <ac-map-layer-provider [provider]="activeProvider"
+                         [options]="{
+                                url : 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer'
+                            }">
+  </ac-map-layer-provider>
+  <ac-layer acFor="let drone of drones$" [context]="this">
+    <ac-billboard-desc props="{
+                    image: drone.image,
+                    position: drone.position,
+                    scale: 0.4
+                  }">
+    </ac-billboard-desc>
+    <ac-label-desc props="{
+                  position: drone.position,
+                  text: drone.labelText,
+                  pixelOffset: [0, -30] | pixelOffset,
+                  font: '15px arial',
+                  fillColor: drone.labelColor
+          }">
+    </ac-label-desc>
+  </ac-layer>
+
+  <ac-layer acFor="let pad of pads$" [context]="this">
+    <ac-billboard-desc props="{
+                    image: pad.image,
+                    position: pad.position,
+                    scale: 0.5
+                  }">
+    </ac-billboard-desc>
+    <ac-label-desc props="{
+                  position: pad.position,
+                  text: pad.labelText,
+                  pixelOffset: [0, 24] | pixelOffset,
+                  font: '15px arial',
+                  fillColor: pad.labelColor
+          }">
+    </ac-label-desc>
+  </ac-layer>
+</ac-map>
