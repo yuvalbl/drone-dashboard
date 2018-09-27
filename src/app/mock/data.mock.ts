@@ -99,9 +99,6 @@ function initPads() {
       comStatus: Math.random() * 100,
       availableSpot: 2,
     };
-    if(i<10) {
-      console.log('f:',((i % padsPerLatLine) / padsPerLatLine))
-    }
     entities.mapById[pad.id] = pad;
     entities.pads.push(pad);
     entities.availablePads.push(pad);
