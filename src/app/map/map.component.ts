@@ -11,7 +11,7 @@ const Cesium = window['Cesium'];
 })
 export class MapComponent implements OnInit {
   activeProvider = MapLayerProviderOptions.ArcGisMapServer;
-  IMAGES_PATH = '/src/assets/images/';
+  IMAGES_PATH = './assets/images/';
   areaLimits;
   drones$;
   pads$;

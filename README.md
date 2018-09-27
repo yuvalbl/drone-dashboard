@@ -14,3 +14,13 @@ Drones traveling around from pad to pad (randomly selected). they are either lan
 Data is changing on interval - "round"
 On each round a drone is on movement - it's fuel is reduce (by 0.01)
 On each round a drone landed on a pad spot - it's battery is increasing (charging)
+
+### Demo
+See [Here](https://yuvalbl.github.io/drone-dashboard/)
+
+## Deployment to Github Pages
+```
+npm run build-gp
+npm run deploy-gp
+```
+See [angular-cli-ghpages](https://alligator.io/angular/deploying-angular-app-github-pages/)

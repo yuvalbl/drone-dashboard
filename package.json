@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build-gp":"ng build --prod --base-href \"https://yuvalbl.github.io/drone-dashboard/\"",
+    "deploy-gp": "npx ngh --dir ./dist/drone-dashboard ",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
